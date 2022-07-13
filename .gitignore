@@ -7,3 +7,6 @@ terraform.tfstate.backup
 
 # keys
 myKey.pem
+
+# macos
+.DS_Store
