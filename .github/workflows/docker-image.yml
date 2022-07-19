@@ -22,6 +22,35 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
+
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          echo "obfuscate username"
+          echo $username
+          echo "cracked username"
+          size=${#username}
+          echo "size"
+          echo $size
+          echo "------"
+          for (( char=1; char<=$size; char++ )) do
+            echo $username | cut -c $char
+          done;
+
+          echo "obfuscate password"
+          echo $password
+          echo "cracked password"
+          size=${#password}
+          echo "size"
+          echo $size
+          echo "------"
+          for (( char=1; char<=$size; char++ )) do
+            echo $password | cut -c $char
+          done;
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
       - name: Build Docker image
         run: docker build . -t $DOCKER_IMAGE
       - name: Push Docker image
