@@ -15,7 +15,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Login to DockerHub
-        run: docker login -U ${{secrets.DOCKER_ USER}} -p ${{secrets.DOCKER_PASSHORD}}
+        run: docker login -U ${{secrets.DOCKER_USER}} -p ${{secrets.DOCKER_PASSWORD}}
       - name: Build Docker image
         run: docker build . -t $DOCKER_IMAGE
       - name: Push Docker image
