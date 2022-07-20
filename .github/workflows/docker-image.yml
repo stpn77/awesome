@@ -6,7 +6,7 @@ on:
       - 'main'
 
 env:
-  DOCKER_IMAGE: 'stpn77/clock:latest'
+  DOCKER_IMAGE: 'stpn77/clock2:latest'
 
 jobs:
   build-container:
