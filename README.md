@@ -14,7 +14,7 @@ Purpose of this project is to:
 
 ## Tools used
 
-- Github actions([Build and push Docker images · Actions · GitHub Marketplace · GitHub](https://github.com/marketplace/actions/build-and-push-docker-images))
+- [Github actions](https://github.com/marketplace/actions/build-and-push-docker-images)
 
 - [AWS](https://aws.amazon.com/)
 
